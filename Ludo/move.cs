@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Ludo
 {
-    class Player
+    class Move : MainWindow
     {
+      
     }
 }

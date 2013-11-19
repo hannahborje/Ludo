@@ -61,15 +61,16 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="dice.cs" />
+    <Compile Include="Dice.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="piece.cs" />
-    <Compile Include="player.cs" />
+    <Compile Include="Move.cs" />
+    <Compile Include="Piece.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -114,6 +115,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\yellow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\lavender.jpg" />
+    <Resource Include="images\lemon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\green.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

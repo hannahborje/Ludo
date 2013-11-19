@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ludo
 {
-    class dice
+    class Dice
     {  
        
         public String roll_dice()

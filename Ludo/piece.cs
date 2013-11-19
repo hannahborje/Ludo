@@ -8,44 +8,37 @@ using System.Windows.Media.Imaging;
 
 namespace Ludo
 {
-    class piece : INotifyPropertyChanged
+    public class Piece 
     {
         private int _x, _y;
         private String color;
-        public event PropertyChangedEventHandler PropertyChanged;
+       
 
-        public piece(String color, int startX, int startY){
+        public Piece(String color, int startX, int startY){
             this.color = color;
             _x = startX;
             _y = startY;
      
     }
-        public int x
+        public int X
         {
             get { return _x; }
             set
             {
                 _x = value;
-                OnPropertyChanged("x");
+              
             }
         }
-        public int y
+        public int Y
         {
             get { return _y; }
             set
             {
                 _y = value;
-                OnPropertyChanged("y");
+          
             }
         }
-        protected void OnPropertyChanged(string property)
-        {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(property));
-            }
-        }
+     
         public BitmapImage getImage()
         {
             BitmapImage image = new BitmapImage(new Uri("/images/" + color + ".jpg", UriKind.Relative));

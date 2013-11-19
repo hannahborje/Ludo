@@ -71,22 +71,13 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
+         
+            <Ellipse Fill="AliceBlue" Grid.Column="1" Grid.Row="1" Width="auto" Height="auto" Grid.ColumnSpan="2" Grid.RowSpan="2" x:Name="blueStart"></Ellipse>   
+            <Ellipse Fill="LavenderBlush" Grid.Column="8" Grid.Row="1" Width="auto" Height="auto" Grid.ColumnSpan="2" Grid.RowSpan="2" x:Name="lavenderStart"></Ellipse>      
+            <Ellipse Fill="LemonChiffon" Grid.Column="8" Grid.Row="8" Width="auto" Height="auto" Grid.ColumnSpan="2" Grid.RowSpan="2" x:Name="lemonStart"></Ellipse>
+            <Ellipse Fill="#CCFF99" Grid.Column="1" Grid.Row="8" Width="auto" Height="auto" Grid.ColumnSpan="2" Grid.RowSpan="2" x:Name="greenStart"></Ellipse>
 
-            
-            <Ellipse Fill="AliceBlue" Grid.Column="1" Grid.Row="1" Width="auto" Height="auto" Grid.ColumnSpan="2" Grid.RowSpan="2" x:Name="blueStart"></Ellipse>
-            <Image x:Name="blueStart1" Grid.Column="1" Grid.Row="1" ></Image>
-            <Image x:Name="blueStart2" Grid.Column="2" Grid.Row="1"></Image>
-            <Image x:Name="blueStart3" Grid.Column="1" Grid.Row="2"></Image>
-            <Image x:Name="blueStart4" Grid.Column="2" Grid.Row="2"></Image>
-            <Ellipse Fill="LavenderBlush" Grid.Column="8" Grid.Row="1" Width="auto" Height="auto" Grid.ColumnSpan="2" Grid.RowSpan="2" x:Name="lavenderStart"></Ellipse>
-            <Image x:Name="lavenderStart1" Grid.Column="8" Grid.Row="1"></Image>
-            <Image x:Name="lavenderStart2" Grid.Column="9" Grid.Row="1"></Image>
-            <Image x:Name="lavenderStart3" Grid.Column="8" Grid.Row="2"></Image>
-            <Image x:Name="lavenderStart4" Grid.Column="9" Grid.Row="2"></Image>
-            <Ellipse Fill="LemonChiffon" Grid.Column="8" Grid.Row="8" x:Name="Lemon" Width="auto" Height="auto" Grid.ColumnSpan="2" Grid.RowSpan="2"></Ellipse>
-            <Ellipse Fill="#CCFF99" Grid.Column="1" Grid.Row="8" x:Name="Greeen" Width="auto" Height="auto" Grid.ColumnSpan="2" Grid.RowSpan="2"></Ellipse>
-
-            <Ellipse Fill="AliceBlue" Grid.Column="0" Grid.Row="4" Stroke="Gray" StrokeThickness="1px" x:Name="blue1"></Ellipse>
+            <Ellipse Fill="AliceBlue" Grid.Column="0" Grid.Row="4" Stroke="Gray" StrokeThickness="1px" x:Name="b1"></Ellipse>
             <Ellipse Fill="White" Grid.Column="1" Grid.Row="4"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
             <Ellipse Fill="White" Grid.Column="2" Grid.Row="4"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
             <Ellipse Fill="White" Grid.Column="3" Grid.Row="4"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
@@ -147,6 +138,26 @@
             <Ellipse Fill="#CCFF99" Grid.Column="5" Grid.Row="6" Stroke="Gray" StrokeThickness="1px"></Ellipse>
 
             <Ellipse Fill="Black" Grid.Column="5" Grid.Row="5"></Ellipse>
+            
+            <Image x:Name="blueStart1" Grid.Column="{Binding Path=Pieces[0].X}" Grid.Row="{Binding Path=Pieces[0].Y, UpdateSourceTrigger=PropertyChanged}"></Image>
+            <Image x:Name="blueStart2" Grid.Column="{Binding Path=Pieces[1].X}" Grid.Row="{Binding Path=Pieces[1].Y, UpdateSourceTrigger=PropertyChanged}" ></Image>
+            <Image x:Name="blueStart3" Grid.Column="{Binding Path=Pieces[2].X}" Grid.Row="{Binding Path=Pieces[2].Y, UpdateSourceTrigger=PropertyChanged}" ></Image>
+            <Image x:Name="blueStart4" Grid.Column="{Binding Path=Pieces[3].X}" Grid.Row="{Binding Path=Pieces[3].Y, UpdateSourceTrigger=PropertyChanged}" ></Image>
+
+            <Image x:Name="lavenderStart1" Grid.Column="{Binding Path=Pieces[4].X}" Grid.Row="{Binding Path=Pieces[4].Y, UpdateSourceTrigger=PropertyChanged}"></Image>
+            <Image x:Name="lavenderStart2" Grid.Column="{Binding Path=Pieces[5].X}" Grid.Row="{Binding Path=Pieces[5].Y, UpdateSourceTrigger=PropertyChanged}"></Image>
+            <Image x:Name="lavenderStart3" Grid.Column="{Binding Path=Pieces[6].X}" Grid.Row="{Binding Path=Pieces[6].Y, UpdateSourceTrigger=PropertyChanged}"></Image>
+            <Image x:Name="lavenderStart4" Grid.Column="{Binding Path=Pieces[7].X}" Grid.Row="{Binding Path=Pieces[7].Y, UpdateSourceTrigger=PropertyChanged}"></Image>
+
+            <Image x:Name="lemonStart1" Grid.Column="{Binding Path=Pieces[8].X}" Grid.Row="{Binding Path=Pieces[8].Y, UpdateSourceTrigger=PropertyChanged}"></Image>
+            <Image x:Name="lemonStart2" Grid.Column="{Binding Path=Pieces[9].X}" Grid.Row="{Binding Path=Pieces[9].Y, UpdateSourceTrigger=PropertyChanged}" ></Image>
+            <Image x:Name="lemonStart3" Grid.Column="{Binding Path=Pieces[10].X}" Grid.Row="{Binding Path=Pieces[10].Y, UpdateSourceTrigger=PropertyChanged}" ></Image>
+            <Image x:Name="lemonStart4" Grid.Column="{Binding Path=Pieces[11].X}" Grid.Row="{Binding Path=Pieces[11].Y, UpdateSourceTrigger=PropertyChanged}" ></Image>
+
+            <Image x:Name="greenStart1" Grid.Column="{Binding Path=Pieces[12].X}" Grid.Row="{Binding Path=Pieces[12].Y, UpdateSourceTrigger=PropertyChanged}"></Image>
+            <Image x:Name="greenStart2" Grid.Column="{Binding Path=Pieces[13].X}" Grid.Row="{Binding Path=Pieces[13].Y, UpdateSourceTrigger=PropertyChanged}" ></Image>
+            <Image x:Name="greenStart3" Grid.Column="{Binding Path=Pieces[14].X}" Grid.Row="{Binding Path=Pieces[14].Y, UpdateSourceTrigger=PropertyChanged}" ></Image>
+            <Image x:Name="greenStart4" Grid.Column="{Binding Path=Pieces[15].X}" Grid.Row="{Binding Path=Pieces[15].Y, UpdateSourceTrigger=PropertyChanged}" ></Image>
         </Grid>
 
     </DockPanel>
