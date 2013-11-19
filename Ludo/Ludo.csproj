@@ -98,16 +98,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="dice1.jpg" />
+    <Resource Include="images\dice1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="dice2.jpg" />
+    <Resource Include="images\dice2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="dice3.jpg" />
-    <Resource Include="dice4.jpg" />
-    <Resource Include="dice5.jpg" />
-    <Resource Include="dice6.jpg" />
+    <Resource Include="images\dice3.jpg" />
+    <Resource Include="images\dice4.jpg" />
+    <Resource Include="images\dice5.jpg" />
+    <Resource Include="images\dice6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\red.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\yellow.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

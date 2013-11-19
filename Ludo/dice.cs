@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 namespace Ludo
 {
     class dice
-    {
-        public int number { get; set; }
-
-        public dice(int Number)
+    {  
+       
+        public String roll_dice()
         {
-            Number = number;
-        }
+            Random num = new Random();
+            int Number = num.Next(1, 7);
 
-        //events, other properties
+            return Number.ToString();
+        }
     }
 }
