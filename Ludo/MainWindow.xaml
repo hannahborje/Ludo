@@ -1,8 +1,153 @@
-﻿<Window
+﻿<Window x:Class="Ludo.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Name="board" x:Class="Ludo.MainWindow"
-        Title="MainWindow"    
-        Height="800" 
-        Width="800" ResizeMode="NoResize"
-       />
+   
+        Title="MainWindow" Height="auto" Width="auto">
+
+
+    <DockPanel>
+        <StackPanel Height="auto" Width="200" DockPanel.Dock="Left">
+
+            <Border BorderBrush="#CCFFFF" BorderThickness="2" CornerRadius="8" Margin="20,100,20,0">
+                <TextBox Name="Menu" Width="200" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Background="#CCFFFF" BorderBrush="AliceBlue" FontSize="40" FontFamily="Jolly Lodger" IsReadOnly="True" HorizontalContentAlignment="Center">Menu</TextBox>
+            </Border>
+            <Border BorderBrush="#CCFFFF" BorderThickness="1" CornerRadius="8" Margin="20,0,20,0">
+                <Button Height="40" Width="200" HorizontalAlignment="Center" Background="#CCFFFF" BorderBrush="AliceBlue" Click="Start_Game" Content="Start"></Button>
+            </Border>
+            <Border BorderBrush="#CCFFFF" BorderThickness="1" CornerRadius="8" Margin="20,0,20,0">
+                <Button Height="40" Width="200" HorizontalAlignment="Center" Background="#CCFFFF" BorderBrush="AliceBlue" Click="Pause_Game" Content="Pause"></Button>
+            </Border>
+            <Border BorderBrush="#CCFFFF" BorderThickness="1" CornerRadius="8" Margin="20,0,20,0">
+                <Button Height="40" Width="200" HorizontalAlignment="Center" Background="#CCFFFF" BorderBrush="AliceBlue" Click="Quit_Game">Quit</Button>
+            </Border>
+            <Border BorderBrush="#CCFFFF" BorderThickness="1" CornerRadius="8" Margin="20,0,20,0">
+                <Button Height="40" Width="200" HorizontalAlignment="Center" Background="#CCFFFF" BorderBrush="AliceBlue" Click="Highscore" Content="Highscore"></Button>
+            </Border>
+        </StackPanel>
+
+        <Grid Height="auto" Width="200" DockPanel.Dock="Right">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <TextBox Background="#CCFFFF" Grid.Row="1" Margin="10,10,10,0" Height="60" Width="auto" HorizontalAlignment="Center"
+                     VerticalAlignment="Center" FontFamily="Comic Sans MS" FontSize="25">Your turn</TextBox>
+            <Image Name="imgdice" Grid.Row="3"></Image>
+            <Button Background="#CCFFFF" FontFamily="Comic Sans MS" FontSize="25" HorizontalAlignment="Center" 
+                     VerticalAlignment="Center" Width="120" Height="60" BorderBrush="AliceBlue" Grid.Row="4" Margin="10,10,10,10" 
+                    Content="Roll dice" Click="Roll_Dice"></Button>
+
+
+        </Grid>
+
+        <StackPanel Height="100" Width="auto" DockPanel.Dock="Top" Margin="0,20,0,40">
+            <Border BorderBrush="#CCFFFF" BorderThickness="2" CornerRadius="8" Margin="0,0,0,20">
+                <TextBox Background="#CCFFFF" Width="auto" Height="100" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+                         FontFamily="Comic Sans MS" FontSize="40">The Game</TextBox>
+            </Border>
+        </StackPanel>
+
+        <Grid Height="auto" Width="auto" DockPanel.Dock="Top" Margin="40,40,40,40">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Ellipse Fill="AliceBlue" Grid.Column="1" Grid.Row="1" x:Name="Bisque" Width="auto" Height="auto" Grid.ColumnSpan="2" Grid.RowSpan="2"></Ellipse>
+            <Ellipse Fill="LavenderBlush" Grid.Column="8" Grid.Row="1" x:Name="Lavender" Width="auto" Height="auto" Grid.ColumnSpan="2" Grid.RowSpan="2"></Ellipse>
+            <Ellipse Fill="LemonChiffon" Grid.Column="8" Grid.Row="8" x:Name="Lemon" Width="auto" Height="auto" Grid.ColumnSpan="2" Grid.RowSpan="2"></Ellipse>
+            <Ellipse Fill="#CCFF99" Grid.Column="1" Grid.Row="8" x:Name="Greeen" Width="auto" Height="auto" Grid.ColumnSpan="2" Grid.RowSpan="2"></Ellipse>
+
+            <Ellipse Fill="AliceBlue" Grid.Column="0" Grid.Row="4" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="1" Grid.Row="4"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="2" Grid.Row="4"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="3" Grid.Row="4"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="4" Grid.Row="4"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="4" Grid.Row="3"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="4" Grid.Row="2"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="4" Grid.Row="1"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="4" Grid.Row="0"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="5" Grid.Row="0"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="LavenderBlush" Grid.Column="6" Grid.Row="0"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="LavenderBlush" Grid.Column="5" Grid.Row="1"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="LavenderBlush" Grid.Column="5" Grid.Row="2"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="LavenderBlush" Grid.Column="5" Grid.Row="3"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="LavenderBlush" Grid.Column="5" Grid.Row="4"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+
+            <Ellipse Fill="White" Grid.Column="6" Grid.Row="1"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="6" Grid.Row="2"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="6" Grid.Row="3"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="6" Grid.Row="4"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="7" Grid.Row="4"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="8" Grid.Row="4"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="9" Grid.Row="4"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="10" Grid.Row="4"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="11" Grid.Row="4"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="11" Grid.Row="5"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="LemonChiffon" Grid.Column="9" Grid.Row="5"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="LemonChiffon" Grid.Column="8" Grid.Row="5"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="LemonChiffon" Grid.Column="7" Grid.Row="5"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="LemonChiffon" Grid.Column="6" Grid.Row="5"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="LemonChiffon" Grid.Column="11" Grid.Row="6"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="9" Grid.Row="6"  Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="8" Grid.Row="6" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="7" Grid.Row="6" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="6" Grid.Row="6" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="6" Grid.Row="7" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="6" Grid.Row="8" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="6" Grid.Row="9" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="6" Grid.Row="10" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="5" Grid.Row="10" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="#CCFF99" Grid.Column="4" Grid.Row="10" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="4" Grid.Row="8" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="4" Grid.Row="7" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="4" Grid.Row="6" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="3" Grid.Row="6" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="2" Grid.Row="6" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="1" Grid.Row="6" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="0" Grid.Row="6" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="4" Grid.Row="6" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="0" Grid.Row="5" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="AliceBlue" Grid.Column="1" Grid.Row="5" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="AliceBlue" Grid.Column="2" Grid.Row="5" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="AliceBlue" Grid.Column="3" Grid.Row="5" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="AliceBlue" Grid.Column="4" Grid.Row="5" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="White" Grid.Column="4" Grid.Row="9" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="#CCFF99" Grid.Column="5" Grid.Row="9" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="#CCFF99" Grid.Column="5" Grid.Row="8" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="#CCFF99" Grid.Column="5" Grid.Row="7" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+            <Ellipse Fill="#CCFF99" Grid.Column="5" Grid.Row="6" Stroke="Gray" StrokeThickness="1px"></Ellipse>
+
+            <Ellipse Fill="Black" Grid.Column="5" Grid.Row="5"></Ellipse>
+        </Grid>
+
+    </DockPanel>
+</Window>
