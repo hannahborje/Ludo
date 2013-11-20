@@ -44,6 +44,10 @@ namespace Ludo
             BitmapImage image = new BitmapImage(new Uri("/images/" + color + ".jpg", UriKind.Relative));
             return image;
         }
+        public void movePiece(int steps, Dictionary<int, List<int>> pos)
+        {
+
+        }
      
     }
 }

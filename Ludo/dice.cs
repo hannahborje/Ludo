@@ -9,12 +9,12 @@ namespace Ludo
     class Dice
     {  
        
-        public String roll_dice()
+        public int roll_dice()
         {
             Random num = new Random();
             int Number = num.Next(1, 7);
 
-            return Number.ToString();
+            return Number;
         }
     }
 }

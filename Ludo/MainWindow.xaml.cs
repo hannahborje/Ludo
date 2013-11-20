@@ -27,6 +27,43 @@ namespace Ludo
             InitializeComponent();
             this.DataContext = this;
         }
+        public Dictionary<int, List<int>> positions = new Dictionary<int, List<int>>(){
+
+                {1, new List<int> {0,4}}, {2, new List<int> {1,4}}, {3, new List<int> {2,4}}, {4, new List<int> {3,4}},       
+                {5, new List<int> {4,4}}, {6, new List<int> {4,3}}, {7, new List<int> {4,2}}, {8, new List<int> {4,1}},
+                {9, new List<int> {4,0}}, {10, new List<int> {5,0}}, {11, new List<int> {6,0}}, {12, new List<int> {6,1}},               
+                {13, new List<int> {6,2}}, {14, new List<int> {6,3}}, {15, new List<int> {6,4}}, {16, new List<int> {7,4}},
+                {17, new List<int> {8,4}}, {18, new List<int> {9,4}}, {19, new List<int> {10,4}}, {20, new List<int> {10,5}},                                                                                              
+                {21, new List<int> {10,6}}, {22, new List<int> {9,6}}, {23, new List<int> {8,6}}, {24, new List<int> {7,6}},                                               
+                {25, new List<int> {6,6}}, {26, new List<int> {6,7}}, {27, new List<int> {6,8}}, {28, new List<int> {6,9}},
+                {29, new List<int> {6,10}}, {30, new List<int> {5,10}}, {31, new List<int> {4,10}}, {32, new List<int> {4,9}},                                                                                           
+                {33, new List<int> {4,8}}, {34, new List<int> {4,7}}, {35, new List<int> {4,6}}, {36, new List<int> {3,6}},                                               
+                {37, new List<int> {2,6}}, {38, new List<int> {1,6}}, {39, new List<int> {0,6}}, {40, new List<int> {0,5}},
+             
+                {41, new List<int> {5,1}},
+                {42, new List<int> {5,2}},
+                {43, new List<int> {5,3}},
+                {44, new List<int> {5,4}},
+
+                {45, new List<int> {9,5}},
+                {46, new List<int> {8,5}},
+                {47, new List<int> {7,5}},
+                {48, new List<int> {6,5}},
+
+                {49, new List<int> {5,9}},
+                {50, new List<int> {5,8}},
+                {51, new List<int> {5,7}},
+                {52, new List<int> {5,6}},
+
+                {53, new List<int> {1,5}},
+                {54, new List<int> {2,5}},
+                {55, new List<int> {3,5}},
+                {56, new List<int> {4,5}},
+
+                
+        };
+
+    
         public event PropertyChangedEventHandler PropertyChanged;
         private List<Piece> pieces;
         public List<Piece> Pieces
@@ -48,8 +85,11 @@ namespace Ludo
         {
             Button b = e.Source as Button;
             Dice newDice = new Dice();
-            BitmapImage Img = new BitmapImage(new Uri("/images/dice" + newDice.roll_dice() + ".jpg", UriKind.Relative));
+            int number = newDice.roll_dice();
+            BitmapImage Img = new BitmapImage(new Uri("/images/dice" + number.ToString() + ".jpg", UriKind.Relative));
             imgdice.Source = Img;
+
+            Pieces[2].movePiece(number, positions);
 
            
         }
@@ -57,6 +97,7 @@ namespace Ludo
         {
             pieces = new List<Piece>();
 
+            //Adding every piece and positioning them in nest
             Piece blue1 = new Piece("blue",1,1);
             pieces.Add(blue1);
             Piece blue2 = new Piece("blue",2,1 );
@@ -95,6 +136,7 @@ namespace Ludo
              
             Pieces = pieces;
            
+            //Show images of pieces on the board
             BitmapImage blueImg1 = blue1.getImage();
             blueStart1.Source = blueImg1;
             BitmapImage blueImg2 = blue2.getImage();
