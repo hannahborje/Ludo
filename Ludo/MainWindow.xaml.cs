@@ -90,7 +90,8 @@ namespace Ludo
             imgdice.Source = Img;
 
             Pieces[2].movePiece(number, positions);
-
+            Console.WriteLine("Värde x: " + Pieces[2].X + " värde y: " + Pieces[2].Y);
+            Pieces = pieces;
            
         }
         void Start_Game(object sender, RoutedEventArgs e)

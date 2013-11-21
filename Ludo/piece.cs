@@ -46,7 +46,13 @@ namespace Ludo
         }
         public void movePiece(int steps, Dictionary<int, List<int>> pos)
         {
-
+            if (pos.ContainsKey(steps))
+            {
+                X = pos[steps][0];
+                Y = pos[steps][1];
+               
+                
+            }
         }
      
     }
