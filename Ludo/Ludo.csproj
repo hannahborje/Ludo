@@ -128,18 +128,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\dice1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\dice2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\dice3.jpg" />
-    <Resource Include="images\dice4.jpg" />
-    <Resource Include="images\dice5.jpg" />
-    <Resource Include="images\dice6.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="images\red.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -171,6 +159,42 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\banan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cherry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\strawberry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\ananas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\ga5steg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\mr-banana.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\bubble1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\bubble2.png" />
+    <Resource Include="images\bubble3.png" />
+    <Resource Include="images\bubble4.png" />
+    <Resource Include="images\bubble5.png" />
+    <Resource Include="images\bubble6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\dice1.jpg" />
+    <Resource Include="images\dice2.jpg" />
+    <Resource Include="images\dice3.jpg" />
+    <Resource Include="images\dice4.jpg" />
+    <Resource Include="images\dice5.jpg" />
+    <Resource Include="images\dice6.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

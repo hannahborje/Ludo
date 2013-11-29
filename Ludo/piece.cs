@@ -26,7 +26,6 @@ namespace Ludo
             set
             {
                 _x = value;
-              
             }
         }
         public int Y
@@ -41,7 +40,7 @@ namespace Ludo
      
         public BitmapImage getImage()
         {
-            BitmapImage image = new BitmapImage(new Uri("/images/" + color + ".jpg", UriKind.Relative));
+            BitmapImage image = new BitmapImage(new Uri("/images/" + color + ".png", UriKind.Relative));
             return image;
         }
         public void movePiece(int steps, Dictionary<int, List<int>> pos)

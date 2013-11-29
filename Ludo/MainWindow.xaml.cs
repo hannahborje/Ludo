@@ -22,6 +22,7 @@ namespace Ludo
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
+        Boolean start = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -63,7 +64,7 @@ namespace Ludo
                 
         };
 
-    
+      
         public event PropertyChangedEventHandler PropertyChanged;
         private List<Piece> pieces;
         public List<Piece> Pieces
@@ -83,56 +84,62 @@ namespace Ludo
 
         void Roll_Dice(object sender, RoutedEventArgs e)
         {
+            if (start) { 
             Button b = e.Source as Button;
             Dice newDice = new Dice();
             int number = newDice.roll_dice();
-            BitmapImage Img = new BitmapImage(new Uri("/images/dice" + number.ToString() + ".jpg", UriKind.Relative));
-            imgdice.Source = Img;
+           // BitmapImage Img = new BitmapImage(new Uri("/images/dice" + number.ToString() + ".jpg", UriKind.Relative));
+            BitmapImage Img = new BitmapImage(new Uri("/images/bubble" + number.ToString() + ".png", UriKind.Relative));
+            bubble.Source = Img;
+            BitmapImage theDice = new BitmapImage(new Uri("/images/dice" + number.ToString() + ".jpg", UriKind.Relative));
+            dice.Source = theDice;
 
             Pieces[2].movePiece(number, positions);
             Console.WriteLine("Värde x: " + Pieces[2].X + " värde y: " + Pieces[2].Y);
             Pieces = pieces;
+        }
            
         }
         void Start_Game(object sender, RoutedEventArgs e)
         {
+            start = true;
             pieces = new List<Piece>();
-
+           
             //Adding every piece and positioning them in nest
-            Piece blue1 = new Piece("blue",1,1);
+            Piece blue1 = new Piece("ananas",1,1);
             pieces.Add(blue1);
-            Piece blue2 = new Piece("blue",2,1 );
+            Piece blue2 = new Piece("ananas", 2, 1);
             pieces.Add(blue2);
-            Piece blue3 = new Piece("blue",1,2);
+            Piece blue3 = new Piece("ananas", 1, 2);
             pieces.Add(blue3);
-            Piece blue4 = new Piece("blue",2,2);
+            Piece blue4 = new Piece("ananas", 2, 2);
             pieces.Add(blue4);
 
-            Piece lavender1 = new Piece("lavender", 8, 1);
+            Piece lavender1 = new Piece("cherry", 8, 1);
             pieces.Add(lavender1);
-            Piece lavender2 = new Piece("lavender", 9, 1);
+            Piece lavender2 = new Piece("cherry", 9, 1);
             pieces.Add(lavender2);
-            Piece lavender3 = new Piece("lavender", 8, 2);
+            Piece lavender3 = new Piece("cherry", 8, 2);
             pieces.Add(lavender3);
-            Piece lavender4 = new Piece("lavender", 9, 2);
+            Piece lavender4 = new Piece("cherry", 9, 2);
             pieces.Add(lavender4);
 
-            Piece lemon1 = new Piece("lemon", 8, 8);
+            Piece lemon1 = new Piece("banan", 8, 8);
             pieces.Add(lemon1);
-            Piece lemon2 = new Piece("lemon", 9, 8);
+            Piece lemon2 = new Piece("banan", 9, 8);
             pieces.Add(lemon2);
-            Piece lemon3 = new Piece("lemon", 8, 9);
+            Piece lemon3 = new Piece("banan", 8, 9);
             pieces.Add(lemon3);
-            Piece lemon4 = new Piece("lemon", 9, 9);
+            Piece lemon4 = new Piece("banan", 9, 9);
             pieces.Add(lemon4);
 
-            Piece green1 = new Piece("green", 1, 8);
+            Piece green1 = new Piece("strawberry", 1, 8);
             pieces.Add(green1);
-            Piece green2 = new Piece("green", 2, 8);
+            Piece green2 = new Piece("strawberry", 2, 8);
             pieces.Add(green2);
-            Piece green3 = new Piece("green", 1, 9);
+            Piece green3 = new Piece("strawberry", 1, 9);
             pieces.Add(green3);
-            Piece green4 = new Piece("green", 2, 9);
+            Piece green4 = new Piece("strawberry", 2, 9);
             pieces.Add(green4);
              
             Pieces = pieces;
