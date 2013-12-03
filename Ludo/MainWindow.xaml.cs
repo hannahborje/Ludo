@@ -23,6 +23,7 @@ namespace Ludo
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
         Boolean start = false;
+        Boolean choosen = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -84,22 +85,45 @@ namespace Ludo
 
         void Roll_Dice(object sender, RoutedEventArgs e)
         {
-            if (start) { 
-            Button b = e.Source as Button;
-            Dice newDice = new Dice();
-            int number = newDice.roll_dice();
-           // BitmapImage Img = new BitmapImage(new Uri("/images/dice" + number.ToString() + ".jpg", UriKind.Relative));
-            BitmapImage Img = new BitmapImage(new Uri("/images/bubble" + number.ToString() + ".png", UriKind.Relative));
-            bubble.Source = Img;
-            BitmapImage theDice = new BitmapImage(new Uri("/images/dice" + number.ToString() + ".jpg", UriKind.Relative));
-            dice.Source = theDice;
+            if (start) {
+                //Player must choose piece or nest first
+                if (choosen == false)
+                {
+                    BitmapImage choosePiece = new BitmapImage(new Uri("/images/choose.png", UriKind.Relative));
+                    bubble.Source = choosePiece;
+                  
+                }
+                else
+                {
 
-            Pieces[2].movePiece(number, positions);
-            Console.WriteLine("Värde x: " + Pieces[2].X + " värde y: " + Pieces[2].Y);
-            Pieces = pieces;
+                    Button b = e.Source as Button;
+                    Dice newDice = new Dice();
+                    int number = newDice.roll_dice();
+                    BitmapImage Img = new BitmapImage(new Uri("/images/bubble" + number.ToString() + ".png", UriKind.Relative));
+                    bubble.Source = Img;
+                    BitmapImage theDice = new BitmapImage(new Uri("/images/dice" + number.ToString() + ".jpg", UriKind.Relative));
+                    dice.Source = theDice;
+
+                   // Console.WriteLine("Värde x: " + Pieces[2].X + " värde y: " + Pieces[2].Y);
+                    Pieces = pieces;
+                }
         }
            
         }
+        void Choose_Piece(object sender, RoutedEventArgs e)
+        {
+            Image img = e.Source as Image;
+
+            int column = Grid.GetColumn(img);
+            int row = Grid.GetRow(img);
+            Console.WriteLine("column: " + column + " row: " + row);
+            
+            choosen = true;
+        
+
+        }
+
+       
         void Start_Game(object sender, RoutedEventArgs e)
         {
             start = true;
@@ -108,6 +132,7 @@ namespace Ludo
             //Adding every piece and positioning them in nest
             Piece blue1 = new Piece("ananas",1,1);
             pieces.Add(blue1);
+           
             Piece blue2 = new Piece("ananas", 2, 1);
             pieces.Add(blue2);
             Piece blue3 = new Piece("ananas", 1, 2);
@@ -201,4 +226,37 @@ namespace Ludo
 
 
     }
+
+    /* TILL HANNAH
+ * parse gameState
+          
+         GameState gameState = ruleEngine.parseEvent(gameEvent);
+  
+           Debug.Write("\nNests:");
+           for (int i = 0; i < 4; i++)
+           {
+               Debug.Write("\n" + i + ": ");
+               Debug.Write(gameState.Nests[i]);
+                
+           }
+           Debug.Write("\nSquares:");
+           for (int i = 0; i < 4; i++)
+           {
+               Debug.Write("\n" + i + ": ");
+               for (int j = 0; j < 10; j++)
+               {
+                   Debug.Write(gameState.Squares[i][j] + " , ");
+               }
+           }
+           Debug.Write("\nExitSquares:");
+           for (int i = 0; i < 4; i++)
+           {
+               Debug.Write("\n" + i + ": ");
+               for (int j = 0; j < 4; j++)
+               {
+                   Debug.Write(gameState.ExitSquares[i][j] +  " , " );
+               }
+           }
+
+ ******/
 }

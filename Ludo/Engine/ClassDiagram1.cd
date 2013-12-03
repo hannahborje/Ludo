@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Regelmotor för Ludo (TDDD49: Lab 2)&#xD;&#xA;Hannah Börjesson / Per Jonsson&#xD;&#xA;Innovativ Programmering åk 2&#xD;&#xA;Linköpings universitet 2013&#xD;&#xA;TDDD49&#xD;&#xA;">
+    <Position X="0.5" Y="0.5" Height="1.01" Width="2.773" />
+  </Comment>
+  <Class Name="LudoRules.RuleEngine">
+    <Position X="4" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAEAAAAAAAAAAABAAAgQAAAECCAAABAAAAAA=</HashCode>
+      <FileName>RuleEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LudoRules.LudoBoard">
+    <Position X="5.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AggFAAAgCAQAIoCEMAQAABAAAhSGAAgwYABARCRAgEA=</HashCode>
+      <FileName>LudoBoard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LudoRules.Piece">
+    <Position X="7.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAQAAgABkAAAAIBAAAAAAAAQgAQAAgAMAAAA=</HashCode>
+      <FileName>Piece.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LudoRules.Player">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAABAgAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LudoRules.Square">
+    <Position X="9.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAACAABAAA=</HashCode>
+      <FileName>Square.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LudoRules.ExitSquare">
+    <Position X="9.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Square.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LudoRules.Nest">
+    <Position X="7.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAQAAAIAAAAgAAAAEAAAAAA=</HashCode>
+      <FileName>Nest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LudoRules.BoardObject">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>BoardObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="LudoRules.GameEvent">
+    <Position X="2" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAIQEAAAA=</HashCode>
+      <FileName>GameEvent.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LudoRules.GameState">
+    <Position X="2" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAQAAAAQA=</HashCode>
+      <FileName>GameState.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="LudoRules.Colors">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAADAAAAA=</HashCode>
+      <FileName>Colors.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

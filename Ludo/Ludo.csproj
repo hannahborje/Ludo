@@ -90,6 +90,16 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Dice.cs" />
+    <Compile Include="Engine\BoardObject.cs" />
+    <Compile Include="Engine\Colors.cs" />
+    <Compile Include="Engine\GameEvent.cs" />
+    <Compile Include="Engine\GameState.cs" />
+    <Compile Include="Engine\LudoBoard.cs" />
+    <Compile Include="Engine\Nest.cs" />
+    <Compile Include="Engine\Piece.cs" />
+    <Compile Include="Engine\Player.cs" />
+    <Compile Include="Engine\RuleEngine.cs" />
+    <Compile Include="Engine\Square.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -117,6 +127,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="Engine\ClassDiagram1.cd" />
     <None Include="Ludo_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -195,6 +206,13 @@
     <Resource Include="images\dice4.jpg" />
     <Resource Include="images\dice5.jpg" />
     <Resource Include="images\dice6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\choose.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Regler till Ludo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

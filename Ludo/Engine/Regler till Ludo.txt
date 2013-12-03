@@ -1,0 +1,14 @@
+﻿Reglerna för vårt Ludo följer i stort sett Fia med knuff-regler.
+
+Lite skiljer sig:
+Man måste välja en pjäs som man vill agera för, innan man kastar tärningen.
+Man får enbart kasta 6 för att komma in på spelplanen, på plats 1.
+
+Annars så ser det ut som vanligt:
+Antalet prickar på tärningen bestämmer hur många steg man får ta.
+Man får inte ställa sig på en plats som är upptagen av egen spelpjäs.
+Man knuffar ut motståndares spelpjäs om den råkar befinna sig på en 
+plats dit man vill flytta.
+Efter ett varv rör man sig mot utgången.
+Man måste kasta jämnt antal prickar om man vill bli av med sin pjäs.
+Den som blir av med alla sina pjäser först vinner.

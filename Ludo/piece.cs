@@ -18,6 +18,7 @@ namespace Ludo
             this.color = color;
             _x = startX;
             _y = startY;
+    
      
     }
         public int X
@@ -37,12 +38,14 @@ namespace Ludo
           
             }
         }
+
+   
      
         public BitmapImage getImage()
         {
             BitmapImage image = new BitmapImage(new Uri("/images/" + color + ".png", UriKind.Relative));
             return image;
-        }
+        } 
         public void movePiece(int steps, Dictionary<int, List<int>> pos)
         {
             if (pos.ContainsKey(steps))
